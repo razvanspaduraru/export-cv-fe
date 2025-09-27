@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-xs-10">
+      <ul class="list-group">
+          <a class="list-group-item clearfix"
+           *ngFor="let exportedPublication of exportedPublications; let i = index">
+            <div class="pull-left">
+              <h3 class="list-group-item-heading">{{ exportedPublication.title }}</h3>
+              <h4 class="list-group-item-heading">Publication type : {{ exportedPublication.publication_type }}</h4>
+              <p class="list-group-item-text">{{ exportedPublication.abstract_text }}</p>
+            </div>
+          </a>
+      </ul>
+  </div>
+</div>

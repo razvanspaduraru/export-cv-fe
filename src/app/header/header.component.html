@@ -1,0 +1,23 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand">Publications Book</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li routerLinkActive="active"><a routerLink="/publications">All Publications</a></li>
+                <li routerLinkActive="active"><a routerLink="/exported-publications-list">To Be Exported Publications</a></li>
+                <li routerLinkActive="active"><a routerLink="/statistics">Statistics</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown" appDropdown >
+                    <a style="cursor: pointer;" class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a style="cursor: pointer;" (click)="onSaveData()">Save CV</a></li>
+                        <li><a style="cursor: pointer;" (click)="onExportCV()">Export CV</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

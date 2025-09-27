@@ -1,0 +1,40 @@
+<div class="row fixed">
+  <div class="col-xs-12">
+      <img src="{{ publication.imagePath }}" alt="{{ publication.title }}" class="img-responsive" style="max-height: 250px;">
+  </div>
+</div>
+<div class="row fixed">
+  <div class="col-xs-12">
+      <h1>{{ publication.title }}</h1>
+  </div>
+</div>
+<div class="row fixed">
+  <div class="col-xs-12">
+      <div class="btn-group"
+      appDropdown>
+          <button type="button" class="btn btn-primary dropdown-toggle">
+      Manage Publication <span class="caret"></span>
+    </button>
+          <ul class="dropdown-menu">
+              <li [ngClass]="{'disabled' : publication.isExported === true}"><a (click)="onAddToExportedPublicationsList()" [ngStyle]="{'cursor':!publication.isExported ? 'pointer' : ''}">To Exported Publications</a></li>
+              <li [ngClass]="{'disabled' : publication.isExported === false}"><a (click)="onDeleteFromExportedPublicationsList()" [ngStyle]="{'cursor':publication.isExported ? 'pointer' : ''}">Delete From Exported Publications</a></li>
+          </ul>
+      </div>
+  </div>
+</div>
+<div class="row fixed">
+  <div class="col-xs-12">
+      <h4>Publication date : {{ publication.publication_date }}</h4>
+      <h4>Publication type : {{ publication.publication_type }}</h4>
+      <h4>Publisher : {{ publication.publisher }}</h4>
+      <h4>Authors : {{ publication.authors }}</h4>
+      <h4>Pages : {{ publication.no_pages }}</h4>
+      <h4>Keywords : {{ publication.keywords }}</h4>
+  </div>
+</div>
+
+<!-- <div class="row fixed">
+  <div class="col-xs-12">
+    <h4>{{ publication.abstract_text }}</h4>
+  </div>
+</div> -->
